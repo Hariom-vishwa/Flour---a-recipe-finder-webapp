@@ -1,0 +1,143 @@
+/* Navbar Styling */
+
+.navBar{
+    background-color: var(--pri-col);
+    width: 100%;
+    padding: 2vw 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    margin-bottom: 2vw;
+}
+
+.logo{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1{
+    color: var(--sec-col);
+    font-family: var(--logo-font);
+    font-size: 3vw;
+}
+
+.searchCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.searchCont input{
+    width: 40vw;
+    padding: 0 0.5vw;
+    border: none;
+}
+
+.searchCont button{
+    width: 8vw;
+    border: 1px solid var(--sec-col);
+    background-color: var(--pri-col);
+    color: var(--sec-col);
+}
+
+.searchCont button:hover, .searchCont input:hover, .itemCard .recipeBtn:hover{
+    border: 0px solid var(--pri-col);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    font-size: 0.9vw;
+}
+
+.searchCont input, .searchCont button{
+    font-size: 1vw;
+    height: 2vw;
+    border-radius: 3px;
+    outline: none;
+    font-family: var(--sec-font);
+    letter-spacing: 0.5px;
+}
+
+/* Cards Styling  */
+
+.dishesHeading{
+    text-align: center;
+    font-size: 3vw;
+    font-family: var(--sec-font);
+    color: var(--pri-col);
+}
+
+.errorMessage{
+    width: 100%;
+    font-size: 2.5vw;
+    font-family: var(--sec-font);
+    text-align: center;
+    animation: error 1s ease infinite;
+}
+
+@keyframes error {
+    0%,100%{
+        color: red;
+    }
+    50%{
+        color: var(--sec-col);
+    }
+}
+
+.cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    row-gap: 2vw;
+    column-gap: 2vw;
+    padding: 2vw 0;
+}
+
+.itemCard{
+    width: 25vw;
+    min-height: 35vw;
+    padding: 1vw;
+    border: 2px solid;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+}
+
+.itemCard img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5vw;
+}
+
+.itemCard .itemCate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemCard .itemCate h1{
+    font-family: var(--sec-font);
+    color: var(--pri-col);
+}
+
+.itemCard .itemCate p{
+    font-size: 1vw;
+    font-family: var(--sec-font);
+}
+
+.itemCard .recipeBtn{
+    width: 100%;
+    padding: 0.5vw 0;
+    border-radius: 0.5vw;
+    border: none;
+    outline: none;
+    background-color: var(--pri-col);
+    font-family: var(--sec-font);
+    color: var(--sec-col);
+    font-size: 1vw;
+}
