@@ -141,3 +141,71 @@
     color: var(--sec-col);
     font-size: 1vw;
 }
+
+/* Recipe  */
+
+.recipeCont{
+    /* border: 1px solid #000; */
+    /* width: 80%; */
+    height: 40vw;
+    padding: 3vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3vw;
+    font-family: var(--sec-font);
+}
+
+
+.recipeCont .recipeDets{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+}
+
+.recipeCont img, .recipeDets{
+    width: 35vw;
+    height: 35vw;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.recipeDets{
+    width: 60vw;
+    padding: 2vw;
+}
+
+.recipeDets .headingsButton{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1vw;
+}
+
+.recipeDets .headingsButton .recipeBtn{
+    padding: 0.5vw 2vw;
+    border-radius: 0.5vw;
+    border: none;
+    outline: none;
+    background-color: var(--pri-col);
+    font-family: var(--sec-font);
+    color: var(--sec-col);
+    font-size: 1vw;
+}
+
+
+.recipeDets p{
+    height: 25vw;
+    overflow-y: scroll;
+}
+
+
+.recipeCont h1, .recipeCont h3{
+    color: var(--pri-col);
+}
