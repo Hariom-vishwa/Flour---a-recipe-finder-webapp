@@ -54,12 +54,12 @@
 .errorMessage{
     font-family: var(--sec-font);
     text-align: center;
-    animation: error 1s ease infinite;
+    animation: error 3s cubic-bezier(1, 0, 0, 1) infinite;
 }
 
 @keyframes error {
     0%,100%{
-        color: red;
+        color: var(--pri-col);
     }
     50%{
         color: var(--sec-col);
@@ -171,7 +171,7 @@
         }
         
         .searchCont input{
-            width: 35vw;
+            width: 40vw;
             height: 3.5vh !important;
             padding: 0 2vw;
         }
@@ -183,13 +183,13 @@
         }
         
         .searchCont button:hover, .searchCont input:hover, .itemCard .recipeBtn:hover{
-            font-size: 1.5vw;
+            font-size: 2vw;
         }
         
         .searchCont input, .searchCont button{
-            font-size: 2vw;
+            font-size:2.5vw;
             height: 2vw;
-            border-radius: 2vw;
+            border-radius: 1vw;
             letter-spacing: 0.5px;
         }
         
@@ -203,36 +203,34 @@
         .errorMessage{
             width: 100%;
             font-size: 5vw;
-            font-family: var(--sec-font);
-            text-align: center;
-            animation: error 1s ease infinite;
         }
         
         @keyframes error {
             0%,100%{
-                color: red;
+                color: var(--pri-col);
+                padding-top: 50vw;
             }
             50%{
+                padding-top: 0vw;
                 color: var(--sec-col);
             }
         }
         
         .cards{
             width: 100%;
+            /* border: 1px solid #000; */
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(1,1fr);
             place-items: center;
-            row-gap: 2vw;
-            column-gap: 2vw;
+            row-gap: 15vw;
             padding: 2vw 0;
         }
         
         .itemCard{
-            width: 25vw;
-            min-height: 35vw;
-            padding: 1vw;
+            width: 80vw;
+            padding: 3vw;
             border: 2px solid;
-            border-radius: 1vw;
+            border-radius: 3vw;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -243,7 +241,8 @@
         .itemCard img{
             width: 100%;
             height: 100%;
-            border-radius: 0.5vw;
+            border-radius: 1vw;
+            /* object-fit: cover; */
         }
         
         .itemCard .itemCate{
@@ -253,16 +252,20 @@
             align-items: center;
         }
         
+        .itemCard .itemCate h1{
+            font-size:5.5vw;
+        }
         
         .itemCard .itemCate p{
-            font-size: 1vw;
+            font-size: 3vw;
+            border-bottom: 2px dashed var(--pri-col);
         }
         
         .itemCard .recipeBtn{
             width: 100%;
-            padding: 0.5vw 0;
-            border-radius: 0.5vw;
-            font-size: 1vw;
+            padding: 0.5vw 10vw;
+            border-radius: 01vw;
+            font-size: var(--para-425);
         }
         
         /* Recipe  */
@@ -283,7 +286,7 @@
         .recipeCont img, .recipeDets{
             width: 90vw;
             height: 42vh;
-            border-radius: 10px;
+            border-radius: 2vw;
         }
         
         .recipeDets{
@@ -293,18 +296,23 @@
         
         .recipeDets .headingsButton{
             width: 100%;
-            gap: 1vw;
+            gap: 3vw;
         }
         
         .recipeDets .headingsButton .recipeBtn{
             padding: 1vw 4vw;
             border-radius: 0.5vw;
-            font-size: 3vw;
+            font-size: var(--para-425);
+        }
+
+        .headingsButton h1{
+            font-size: var(--heading-425);
         }
         
         
         .recipeDets p{
             height: 20vh;
+            font-size: var(--para-425);
         }
         
     

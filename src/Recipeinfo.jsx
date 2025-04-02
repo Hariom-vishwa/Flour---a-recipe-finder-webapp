@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import Error from "./Error";
 // import "./Homepage.css";
 
 const Recipeinfo = () => {
@@ -24,18 +25,25 @@ const Recipeinfo = () => {
   // Logo styling 
 
   const logoStyle = {
-    color: "var(--pri-col)",
+    width: "100%",
+    textAlign: "center",
+    padding: "7vw 0",
+    fontSize:"10vw",
+    color: "var(--sec-col)",
+    backgroundColor: "var(--pri-col)"
   } 
 
   return (
     <>
-      {!mealRecipe ? (
-        "Data Not Found"
-      ) : (
-        <>
           <div className="logo">
             <h1 style={logoStyle}>Flour</h1>
           </div>
+      {!mealRecipe ? (
+        <div>
+          <Error/>
+        </div>
+      ) : (
+        <>
           <div className="recipeCont">
             <img src={mealRecipe.strMealThumb} alt="" />
             <div className="recipeDets">

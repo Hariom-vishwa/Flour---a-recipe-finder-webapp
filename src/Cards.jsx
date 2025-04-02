@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Error from './Error'
 
 const Cards = ({ details }) => {
   console.log(details);
@@ -8,7 +9,9 @@ const Cards = ({ details }) => {
     <h1 className="dishesHeading">- Dishes -</h1>
     <div class="cards">
       {!details
-        ? <h1 className="errorMessage">Dishes Not Found !!!</h1>
+        ? <div>
+          <Error/>
+        </div>
         : details.map((items) => {
             return (
               <div className="itemCard">
